@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#111418">
+  <title>Jayagoo Spreadsheet: Category Finder &amp; Product Research Notes</title>
+  <meta name="description" content="Explore Jayagoo spreadsheet research by category. Browse shoes, clothing and accessories, understand product details, and organize your next shopping decision.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Jayagoo Spreadsheet — The Product Research Desk">
+  <meta property="og:description" content="Ten category shortcuts, practical product research notes, and clear answers for readers exploring Jayagoo spreadsheet searches.">
+  <meta property="og:site_name" content="CAFANS Research Desk">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jayagoo Spreadsheet — The Product Research Desk">
+  <meta name="twitter:description" content="Find a category. Read the details. Keep useful shopping notes.">
+  <!-- Add a self-referencing canonical URL after the final public page address is known. -->
+  <!-- index.html | Primary keyword: Jayagoo spreadsheet -->
+  <!-- Secondary keywords: Jayagoo product directory; Jayagoo sneaker research; Jayagoo clothing guide; Jayagoo accessories guide. -->
+  <style>
+    :root{
+      color-scheme:dark;
+      --bg:#111418;
+      --panel:#191d23;
+      --raised:#222831;
+      --text:#f3f5f6;
+      --muted:#b0b9c3;
+      --line:#363e48;
+      --accent:#8fe5ed;
+      --soft:#d7dce1;
+      --max:1240px
+    }
+    *{box-sizing:border-box}
+    html{scroll-padding-top:20px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+    a:hover{color:var(--accent)}
+    p,h1,h2,h3,figure{margin:0}
+    p+p{margin-top:14px}
+    svg{display:block;max-width:100%;height:auto}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .mono,.eyebrow,.tag{font-family:"Courier New",monospace}
+    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent)}
+    .masthead{display:flex;justify-content:space-between;align-items:center;gap:22px;padding:25px 0;border-bottom:1px solid var(--line)}
+    .brand{font-size:24px;font-weight:800;letter-spacing:-1px}
+    .masthead-note{color:var(--muted);font-size:12px;text-align:right}
+    .hero{padding:52px 0 31px}
+    .hero-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .edition{border:1px solid var(--line);padding:4px 10px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+    h1{max-width:1050px;margin:22px 0;font-size:clamp(42px,7.5vw,100px);line-height:.99;letter-spacing:-.065em;font-weight:800}
+    h1 span{display:block;color:var(--accent)}
+    .intro{max-width:720px;font-size:18px;color:var(--muted)}
+    .category-panel{border:1px solid var(--line);margin-bottom:28px}
+    .directory-title{display:flex;justify-content:space-between;align-items:baseline;gap:15px;padding:16px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+    .directory-title h2{font-size:15px;letter-spacing:.02em}
+    .directory-title span{font-size:11px;color:var(--muted)}
+    .categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+    .categories a{display:flex;gap:12px;align-items:center;padding:18px 15px;min-height:76px;background:var(--bg);border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px;font-weight:700;line-height:1.35;transition:background .15s}
+    .categories a:nth-child(5n){border-right:0}
+    .categories a:nth-last-child(-n+5){border-bottom:0}
+    .categories a:hover{background:var(--raised)}
+    .categories b{font:11px "Courier New",monospace;color:var(--accent);font-weight:400}
+    .visual-strip{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line)}
+    .visual-strip figure{min-width:0;background:var(--panel)}
+    .visual-strip svg{width:100%;aspect-ratio:1/1;object-fit:contain}
+    .visual-strip figcaption{padding:14px 16px;border-top:1px solid var(--line);font-size:12px;line-height:1.5}
+    .visual-strip figcaption strong{display:block;font-size:14px;color:var(--text)}
+    .visual-strip figcaption span{color:var(--muted)}
+    .visual-note{margin:12px 0 36px;color:var(--muted);font-size:11px}
+    .reading-layout{display:grid;grid-template-columns:230px minmax(0,1fr);border-top:1px solid var(--line)}
+    .side-note{padding:35px 30px 35px 0;border-right:1px solid var(--line)}
+    .side-note h2{font-size:18px;line-height:1.25;margin:12px 0 18px}
+    .side-note p{font-size:13px;color:var(--muted)}
+    .side-note .small-link{display:inline-block;margin-top:22px;color:var(--accent);font-size:13px;border-bottom:1px solid var(--accent)}
+    .article{min-width:0;padding-left:42px}
+    .section{padding:36px 0;border-bottom:1px solid var(--line)}
+    .section:last-child{border-bottom:0}
+    .section h2{font-size:clamp(24px,3vw,36px);line-height:1.15;letter-spacing:-.035em;margin-bottom:18px}
+    .section h3{font-size:18px;line-height:1.3;margin-bottom:10px}
+    .section p{color:var(--muted);max-width:78ch}
+    .answer{font-size:19px;color:var(--text)!important}
+    .inline-label{color:var(--accent);font-weight:700}
+    .research-row{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:24px 0;border-top:1px solid var(--line)}
+    .research-row:first-of-type{margin-top:25px}
+    .research-number{font:22px "Courier New",monospace;color:var(--accent)}
+    .research-row a{display:inline-block;margin-top:12px;color:var(--accent);font-size:13px}
+    .example{padding:22px;background:var(--panel);border-left:3px solid var(--accent);margin:22px 0}
+    .example .eyebrow{display:block;margin-bottom:10px}
+    .example p{font-size:14px}
+    .table-scroll{overflow-x:auto;margin-top:23px}
+    table{width:100%;border-collapse:collapse;font-size:13px;text-align:left}
+    caption{text-align:left;color:var(--muted);padding-bottom:12px;font-size:12px}
+    th,td{padding:15px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{background:var(--panel);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+    td{color:var(--muted)}
+    td:first-child{color:var(--text);font-weight:700;min-width:125px}
+    .research-topics{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px}
+    .topic-group{border-top:2px solid var(--soft);padding-top:16px}
+    .topic-group h3{font-size:14px}
+    .topic-group ul{list-style:none;margin:12px 0 0;padding:0}
+    .topic-group li{padding:5px 0;font-size:13px;color:var(--muted)}
+    details{border-top:1px solid var(--line)}
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;padding:18px 28px 18px 0;font-weight:700;font-size:15px}
+    details p{font-size:14px;padding-bottom:20px}
+    .closing{margin:40px 0;background:var(--accent);color:#11282c;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:36px}
+    .closing h2{font-size:clamp(25px,4vw,43px);line-height:1.1;letter-spacing:-.04em}
+    .closing p{margin-top:10px;font-size:14px;max-width:600px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:50px;padding:13px 23px;background:#11282c;color:#fff;font-size:14px;font-weight:700;white-space:nowrap}
+    .button:hover{color:#fff;background:#24444a}
+    footer{display:flex;justify-content:space-between;gap:35px;padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+    footer p{max-width:790px}
+    footer a{color:var(--text);white-space:nowrap}
+    @media(min-width:1000px){.side-note-inner{position:sticky;top:30px}}
+    @media(max-width:900px){
+      .categories{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .categories a:nth-child(n){border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+      .categories a:nth-child(2n){border-right:0}
+      .categories a:nth-last-child(-n+2){border-bottom:0}
+      .visual-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .reading-layout{grid-template-columns:1fr}
+      .side-note{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}
+      .side-note h2{margin:10px 0}
+      .side-note .small-link{margin-top:12px}
+      .article{padding-left:0}
+      .closing{align-items:flex-start;flex-direction:column}
+    }
+    @media(max-width:540px){
+      .wrap{width:calc(100% - 32px)}
+      .masthead{padding:19px 0}
+      .brand{font-size:21px}
+      .masthead-note{font-size:10px;max-width:115px}
+      .hero{padding-top:35px}
+      .intro{font-size:16px}
+      .directory-title{padding:13px}
+      .directory-title span{display:none}
+      .categories a{padding:15px 11px;gap:9px;font-size:12px;min-height:67px}
+      .visual-strip figcaption{padding:11px}
+      .visual-strip figcaption strong{font-size:12px}
+      .visual-strip figcaption span{font-size:10px}
+      .section{padding:29px 0}
+      .research-topics{grid-template-columns:1fr}
+      .closing{padding:25px}
+      footer{flex-direction:column;gap:16px}
+      .research-row{gap:8px;grid-template-columns:32px 1fr}
+      th,td{padding:12px 9px}
+    }
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+    @media print{
+      :root{--bg:#fff;--panel:#f1f1f1;--text:#111;--muted:#333;--line:#bbb;--accent:#164e58;--soft:#444}
+      body{background:#fff;color:#111}
+      .wrap{width:100%}
+      .reading-layout{display:block}
+      .side-note{display:none}
+      .article{padding:0}
+      .closing{background:#eee;color:#111}
+      details{break-inside:avoid}
+      footer{color:#333}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"Jayagoo Spreadsheet: Category Finder & Product Research Notes",
+        "description":"An independent guide to category browsing and product research for readers searching for Jayagoo spreadsheet.",
+        "inLanguage":"en",
+        "about":{
+          "@type":"Thing",
+          "name":"Jayagoo spreadsheet"
+        },
+        "keywords":[
+          "Jayagoo spreadsheet",
+          "Jayagoo product directory",
+          "Jayagoo sneaker research",
+          "Jayagoo clothing guide",
+          "Jayagoo accessories guide"
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "inLanguage":"en",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What does a Jayagoo spreadsheet search usually mean?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"It usually expresses an interest in organized product links, category lists, or shopping research associated with that search phrase. This page offers an independent category directory and research guidance; it does not provide an official Jayagoo spreadsheet."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Can I download a spreadsheet here?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No downloadable spreadsheet is supplied on this page. You can use the suggested research fields in your own worksheet and follow the category links to CAFANS."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Do the brand illustrations confirm products are available?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. The Nike, Louis Vuitton, Gucci, and Hermès illustrations are visual references, not inventory records or authenticity evidence. Check the destination listing for its actual product information."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Where do the shopping links lead?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Shopping links lead to CAFANS. Category links open the corresponding CAFANS category, while the main browsing button opens the CAFANS homepage."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/Jayagoo-zgaeg/">
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <a class="brand" href="https://www.cafans.com" aria-label="Visit www.cafans.com">www.cafans.com</a>
+      <p class="masthead-note mono">PRODUCT RESEARCH DESK<br>Independent browsing guide</p>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-top">
+          <p class="eyebrow">The category-to-detail approach</p>
+          <span class="edition mono">FASHION / FOOTWEAR / ACCESSORIES</span>
+        </div>
+        <h1 id="page-title">Jayagoo spreadsheet<span>Start with the right question.</span></h1>
+        <p class="intro">Looking for a product list is only the beginning. Choose a category, identify what matters for that item, and keep the evidence beside the link. Use this independent guide to give your browsing a practical direction.</p>
+      </section>
+
+      <nav class="category-panel" aria-label="CAFANS product categories">
+        <div class="directory-title">
+          <h2>Choose your category</h2>
+          <span class="mono">10 DIRECT ROUTES TO CAFANS ↗</span>
+        </div>
+        <div class="categories">
+          <a href="https://cafans.com/category-911-Shoes.html"><b>01</b><span>Shoes</span></a>
+          <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html"><b>02</b><span>Hoodies/Sweaters</span></a>
+          <a href="https://cafans.com/category-913-T-Shirts.html"><b>03</b><span>T-Shirts</span></a>
+          <a href="https://cafans.com/category-914-Jackets.html"><b>04</b><span>Jackets</span></a>
+          <a href="https://cafans.com/category-915-Pants%2FShorts.html"><b>05</b><span>Pants/Shorts</span></a>
+          <a href="https://cafans.com/category-916-Headwear.html"><b>06</b><span>Headwear</span></a>
+          <a href="https://cafans.com/category-917-Sets.html"><b>07</b><span>Sets</span></a>
+          <a href="https://cafans.com/category-918-underwear%2Funderpants.html"><b>08</b><span>Underwear/underpants</span></a>
+          <a href="https://cafans.com/category-919-Jersey.html"><b>09</b><span>Jersey</span></a>
+          <a href="https://cafans.com/category-920-Accessories.html"><b>10</b><span>Accessories</span></a>
+        </div>
+      </nav>
+
+      <section aria-label="Fashion brand illustrations">
+        <div class="visual-strip">
+          <figure>
+            <svg viewBox="0 0 420 420" role="img" aria-labelledby="nike-title nike-desc">
+              <title id="nike-title">Nike sneaker editorial illustration</title>
+              <desc id="nike-desc">An illustrated silver and white sneaker with a swoosh-shaped side detail, shown against a dark technical backdrop.</desc>
+              <rect width="420" height="420" fill="#232b34"/>
+              <g stroke="#3c4753" stroke-width="1">
+                <path d="M0 84H420M0 168H420M0 252H420M0 336H420"/>
+                <path d="M84 0V420M168 0V420M252 0V420M336 0V420"/>
+              </g>
+              <circle cx="228" cy="196" r="126" fill="none" stroke="#8fe5ed" opacity=".3"/>
+              <ellipse cx="216" cy="308" rx="154" ry="19" fill="#11181f"/>
+              <g transform="rotate(-12 210 230)">
+                <path d="M62 252L78 203L118 181L140 137L177 144L197 194L257 222L320 234Q357 242 360 266L348 282L79 282Q59 279 62 252Z" fill="#e8edf0" stroke="#a9b7c2" stroke-width="3"/>
+                <path d="M78 203L111 214L140 173L161 180L179 214L224 239L308 250" fill="none" stroke="#a2b4c1" stroke-width="14"/>
+                <path d="M67 260Q156 273 237 266L359 260L355 282Q240 305 79 286Z" fill="#a7e0e7" stroke="#425b68" stroke-width="3"/>
+                <path d="M125 225Q102 264 143 252L286 211L154 269Q107 287 111 258Q113 240 125 225Z" fill="#1c343f"/>
+                <g stroke="#fff" stroke-width="5" stroke-linecap="round">
+                  <path d="M150 190L179 181M157 203L190 194M169 216L202 208M183 229L217 220"/>
+                </g>
+                <path d="M77 270L83 284M96 273L101 288M300 271L298 289M324 269L322 285" stroke="#435a67" stroke-width="3"/>
+                <path d="M139 147L166 153L176 176L151 176Z" fill="#526e7e"/>
+              </g>
+              <text x="24" y="37" fill="#8fe5ed" font-family="monospace" font-size="11" letter-spacing="3">FOOTWEAR STUDY / 01</text>
+              <text x="24" y="389" fill="#b0c4ce" font-family="monospace" font-size="11">PROFILE · SOLE · SIZE</text>
+            </svg>
+            <figcaption><strong>Nike · Sneakers</strong><span>Look beyond the silhouette.</span></figcaption>
+          </figure>
+
+          <figure>
+            <svg viewBox="0 0 340 340" role="img" aria-labelledby="lv-title lv-desc">
+              <title id="lv-title">Louis Vuitton clothing editorial illustration</title>
+              <desc id="lv-desc">An illustrated tan jacket with small LV letter details and a dark collar.</desc>
+              <defs>
+                <pattern id="lv-pattern" width="36" height="34" patternUnits="userSpaceOnUse">
+                  <text x="5" y="19" fill="#6d553f" font-size="10" font-family="Georgia,serif">LV</text>
+                  <path d="M27 23L30 26L27 29L24 26Z" fill="#6d553f"/>
+                </pattern>
+                <clipPath id="jacket-clip">
+                  <path d="M122 80L150 67H190L218 80L263 118L285 233L243 245L218 164V283H122V164L97 245L55 233L77 118Z"/>
+                </clipPath>
+              </defs>
+              <rect width="340" height="340" fill="#313139"/>
+              <circle cx="170" cy="170" r="126" fill="#41414a"/>
+              <path d="M122 80L150 67H190L218 80L263 118L285 233L243 245L218 164V283H122V164L97 245L55 233L77 118Z" fill="#c5ab8a" stroke="#171b22" stroke-width="4"/>
+              <rect x="50" y="65" width="240" height="225" fill="url(#lv-pattern)" clip-path="url(#jacket-clip)"/>
+              <path d="M147 68L170 94L193 68L202 87L183 115L170 97L157 115L138 87Z" fill="#26272e"/>
+              <path d="M170 98V282M122 270H218M68 218L100 229M240 230L279 219" stroke="#514b45" stroke-width="4"/>
+              <path d="M131 170H157V201H131ZM183 170H209V201H183Z" fill="#ad9274" stroke="#695642" stroke-width="2"/>
+              <g fill="#e3d3bd"><circle cx="174" cy="132" r="2"/><circle cx="174" cy="154" r="2"/><circle cx="174" cy="220" r="2"/><circle cx="174" cy="245" r="2"/></g>
+              <text x="20" y="29" fill="#d9c7b3" font-family="monospace" font-size="10" letter-spacing="2">CLOTHING / 02</text>
+            </svg>
+            <figcaption><strong>Louis Vuitton · Clothing</strong><span>Read the construction details.</span></figcaption>
+          </figure>
+
+          <figure>
+            <svg viewBox="0 0 340 340" role="img" aria-labelledby="gucci-title gucci-desc">
+              <title id="gucci-title">Gucci headwear editorial illustration</title>
+              <desc id="gucci-desc">An illustrated bucket hat with a green and red band and Gucci lettering.</desc>
+              <rect width="340" height="340" fill="#293137"/>
+              <circle cx="170" cy="170" r="126" fill="#3a444a"/>
+              <ellipse cx="170" cy="269" rx="120" ry="17" fill="#20282c"/>
+              <path d="M101 111Q170 74 239 111L254 219H86Z" fill="#c3bcab" stroke="#171d21" stroke-width="4"/>
+              <path d="M98 132Q170 110 242 132L250 194Q170 174 90 194Z" fill="#b2ab98"/>
+              <path d="M89 183Q170 160 251 183L254 207Q170 186 86 207Z" fill="#295247"/>
+              <path d="M88 190Q170 168 252 190L253 200Q170 178 87 200Z" fill="#a94c53"/>
+              <path d="M86 207Q170 185 254 207L290 244Q170 290 50 244Z" fill="#d0c7b3" stroke="#171d21" stroke-width="4"/>
+              <path d="M66 242Q170 275 274 242M78 230Q170 258 264 230" fill="none" stroke="#a49983" stroke-width="2"/>
+              <text x="170" y="157" text-anchor="middle" fill="#353d37" font-family="Georgia,serif" font-size="18" letter-spacing="3">GUCCI</text>
+              <text x="20" y="29" fill="#c3cfd3" font-family="monospace" font-size="10" letter-spacing="2">HEADWEAR / 03</text>
+            </svg>
+            <figcaption><strong>Gucci · Headwear</strong><span>Check circumference and shape.</span></figcaption>
+          </figure>
+
+          <figure>
+            <svg viewBox="0 0 340 340" role="img" aria-labelledby="hermes-title hermes-desc">
+              <title id="hermes-title">Hermès jewelry editorial illustration</title>
+              <desc id="hermes-desc">An illustrated orange bracelet with a gold H-shaped clasp.</desc>
+              <rect width="340" height="340" fill="#302e30"/>
+              <circle cx="170" cy="170" r="126" fill="#423d3d"/>
+              <ellipse cx="174" cy="255" rx="100" ry="19" fill="#242124"/>
+              <g transform="rotate(-22 170 170)">
+                <ellipse cx="170" cy="170" rx="92" ry="65" fill="none" stroke="#b48050" stroke-width="34"/>
+                <ellipse cx="170" cy="166" rx="91" ry="62" fill="none" stroke="#df8c58" stroke-width="23"/>
+                <path d="M84 170Q88 226 170 232Q250 230 258 174" fill="none" stroke="#efb48c" stroke-width="3"/>
+                <rect x="135" y="191" width="72" height="44" rx="5" fill="#b18449" stroke="#ead2a5" stroke-width="3"/>
+                <path d="M151 199V226M191 199V226M151 212H191" stroke="#f4ddac" stroke-width="9"/>
+                <circle cx="142" cy="213" r="2" fill="#6c512f"/>
+                <circle cx="201" cy="213" r="2" fill="#6c512f"/>
+              </g>
+              <text x="20" y="29" fill="#e6c7b2" font-family="monospace" font-size="10" letter-spacing="2">JEWELRY / 04</text>
+            </svg>
+            <figcaption><strong>Hermès · Jewelry</strong><span>Inspect dimensions and closure.</span></figcaption>
+          </figure>
+        </div>
+        <p class="visual-note">Original vector illustrations for visual reference. These drawings do not establish product availability, authenticity, brand endorsement, or affiliation.</p>
+      </section>
+
+      <div class="reading-layout">
+        <aside class="side-note" aria-label="About this research guide">
+          <div class="side-note-inner">
+            <span class="eyebrow">Read before browsing</span>
+            <h2>A directory is a starting point.</h2>
+            <p>This page helps readers researching the phrase “Jayagoo spreadsheet” move from a broad search to specific product questions.</p>
+            <p>It is an independent guide. The shopping destinations are CAFANS pages; an official Jayagoo service or downloadable product database is not provided here.</p>
+            <a class="small-link" href="https://www.cafans.com">Open CAFANS ↗</a>
+          </div>
+        </aside>
+
+        <div class="article">
+          <section class="section" aria-labelledby="meaning-title">
+            <p class="eyebrow">Search intent, explained</p>
+            <h2 id="meaning-title">What are you looking for in a Jayagoo spreadsheet?</h2>
+            <p class="answer">A useful shopping spreadsheet brings product links and decision-making details into one place: category, variant, measurements, listed price, source, and the date you checked it.</p>
+            <p>For readers arriving through a Jayagoo spreadsheet search, the immediate need may be sneakers, a particular clothing category, or accessories. Start with that need rather than opening every listing. The category directory above gives you ten direct routes into CAFANS.</p>
+            <p>A saved entry should distinguish what the listing says from what you have confirmed. Record unknown details as unknown, and revisit the original listing before placing an order.</p>
+          </section>
+
+          <section class="section" aria-labelledby="directory-guide-title">
+            <p class="eyebrow">Research by item type</p>
+            <h2 id="directory-guide-title">Jayagoo product directory: choose the questions that fit.</h2>
+            <p>Different products need different checks. A shoe size, a jacket chest measurement, and a bracelet circumference cannot be evaluated using the same notes.</p>
+
+            <article class="research-row">
+              <span class="research-number" aria-hidden="true">01</span>
+              <div>
+                <h3>Jayagoo sneaker research</h3>
+                <p>Record the model description, selected size system, color, and available measurements. Check whether a length figure describes the foot, insole, or outsole; those values are not interchangeable. Inspect upper, side, heel, and sole views when available.</p>
+                <a href="https://cafans.com/category-911-Shoes.html">Browse the Shoes category ↗</a>
+              </div>
+            </article>
+
+            <article class="research-row">
+              <span class="research-number" aria-hidden="true">02</span>
+              <div>
+                <h3>Jayagoo clothing guide</h3>
+                <p>Compare garment measurements with clothing you already wear. For tops, note chest, shoulder, sleeve, and length. For bottoms, consider waist, rise, inseam, and leg opening. Record fabric information separately from assumptions based on photographs.</p>
+                <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Explore Hoodies/Sweaters ↗</a>
+              </div>
+            </article>
+
+            <article class="research-row">
+              <span class="research-number" aria-hidden="true">03</span>
+              <div>
+                <h3>Jayagoo accessories guide</h3>
+                <p>For hats, check circumference and adjustability. For jewelry, note dimensions, stated material, closure, and care information. If a finish or material is unclear, ask for clarification before treating the item as a match.</p>
+                <a href="https://cafans.com/category-920-Accessories.html">Explore Accessories ↗</a>
+              </div>
+            </article>
+          </section>
+
+          <section class="section" aria-labelledby="record-title">
+            <p class="eyebrow">A practical record</p>
+            <h2 id="record-title">Write down the reason you saved it.</h2>
+            <p>A link without context becomes difficult to use later. Add one sentence that explains the intended use, one detail that supports your choice, and one question that remains open.</p>
+
+            <div class="example">
+              <span class="eyebrow">Illustrative note — not a live listing</span>
+              <p><span class="inline-label">Purpose:</span> A lightweight jacket for layering over a sweatshirt.</p>
+              <p><span class="inline-label">Evidence to save:</span> Garment chest and sleeve measurements from the selected variant.</p>
+              <p><span class="inline-label">Open question:</span> Is the fabric composition stated, and does the listing explain the lining?</p>
+              <p><span class="inline-label">Next action:</span> Compare the measurements with a jacket that already fits.</p>
+            </div>
+
+            <div class="table-scroll" role="region" aria-label="Suggested spreadsheet fields" tabindex="0">
+              <table>
+                <caption>Suggested fields for your own product research worksheet</caption>
+                <thead>
+                  <tr><th scope="col">Field</th><th scope="col">What to record</th><th scope="col">Why it helps</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Source &amp; variant</td><td>Original URL, selected color, size, and check date.</td><td>Keeps notes tied to the exact option you inspected.</td></tr>
+                  <tr><td>Fit evidence</td><td>Measurements, units, and the measurement method if stated.</td><td>Allows a useful comparison with something you own.</td></tr>
+                  <tr><td>Material evidence</td><td>Composition as described in the listing, with unknowns marked.</td><td>Separates a written specification from a visual impression.</td></tr>
+                  <tr><td>Cost assumptions</td><td>Listed price and currency; shipping, fees, and taxes where known.</td><td>Prevents a product-only price from becoming an assumed total.</td></tr>
+                  <tr><td>Decision status</td><td>Researching, waiting for details, saved, or removed.</td><td>Shows which entries still need attention.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="evidence-title">
+            <p class="eyebrow">Resolve the unknowns</p>
+            <h2 id="evidence-title">When the picture and the description leave a gap.</h2>
+            <p><span class="inline-label">If the image looks right but sizing is missing:</span> keep the item in research status. A familiar size label does not establish the measurements of that particular garment.</p>
+            <p><span class="inline-label">If the price looks attractive but the total is unclear:</span> record the product price separately. Add only the shipping, service fees, and applicable taxes you can establish for your destination.</p>
+            <p><span class="inline-label">If branding is visible but provenance is unclear:</span> do not treat a logo, illustration, or product photograph as authentication. Look for reliable seller information and supporting documentation appropriate to the purchase.</p>
+            <p><span class="inline-label">If the saved entry is old:</span> reopen its source. Variants, prices, availability, and policies may have changed since your notes were written.</p>
+          </section>
+
+          <section class="section" aria-labelledby="topics-title">
+            <p class="eyebrow">Search vocabulary</p>
+            <h2 id="topics-title">Refine the search around your actual need.</h2>
+            <p>These related search phrases describe possible research directions, not verified inventories or search-volume rankings. Choose the terms that match the product or information you need.</p>
+            <div class="research-topics">
+              <div class="topic-group">
+                <h3>Product discovery</h3>
+                <ul>
+                  <li>Jayagoo product links</li>
+                  <li>Jayagoo fashion finds</li>
+                  <li>Jayagoo category list</li>
+                  <li>Jayagoo shopping research</li>
+                  <li>Jayagoo product comparison</li>
+                  <li>Jayagoo shopping notes</li>
+                  <li>Jayagoo wishlist organization</li>
+                </ul>
+              </div>
+              <div class="topic-group">
+                <h3>Footwear details</h3>
+                <ul>
+                  <li>Jayagoo shoes spreadsheet</li>
+                  <li>Jayagoo sneaker finds</li>
+                  <li>sneaker size comparison</li>
+                  <li>shoe measurement guide</li>
+                  <li>sneaker colorway research</li>
+                  <li>footwear material details</li>
+                  <li>shoe listing photo checklist</li>
+                </ul>
+              </div>
+              <div class="topic-group">
+                <h3>Clothing details</h3>
+                <ul>
+                  <li>Jayagoo clothing spreadsheet</li>
+                  <li>Jayagoo hoodie finds</li>
+                  <li>Jayagoo T-shirt research</li>
+                  <li>Jayagoo jacket comparison</li>
+                  <li>pants inseam measurements</li>
+                  <li>garment size chart comparison</li>
+                  <li>clothing fabric composition</li>
+                </ul>
+              </div>
+              <div class="topic-group">
+                <h3>Accessories &amp; planning</h3>
+                <ul>
+                  <li>Jayagoo accessories spreadsheet</li>
+                  <li>Jayagoo headwear finds</li>
+                  <li>hat circumference guide</li>
+                  <li>bracelet size measurements</li>
+                  <li>jewelry material information</li>
+                  <li>shopping cost worksheet</li>
+                  <li>product link tracking template</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="faq-title">
+            <p class="eyebrow">Direct answers</p>
+            <h2 id="faq-title">Know what this page provides.</h2>
+            <details open>
+              <summary>What does a Jayagoo spreadsheet search usually mean?</summary>
+              <p>It usually expresses an interest in organized product links, category lists, or shopping research associated with that search phrase. This page offers an independent category directory and research guidance; it does not provide an official Jayagoo spreadsheet.</p>
+            </details>
+            <details>
+              <summary>Can I download a spreadsheet here?</summary>
+              <p>No downloadable spreadsheet is supplied on this page. You can use the suggested research fields in your own worksheet and follow the category links to CAFANS.</p>
+            </details>
+            <details>
+              <summary>Do the brand illustrations confirm products are available?</summary>
+              <p>No. The Nike, Louis Vuitton, Gucci, and Hermès illustrations are visual references, not inventory records or authenticity evidence. Check the destination listing for its actual product information.</p>
+            </details>
+            <details>
+              <summary>Where do the shopping links lead?</summary>
+              <p>Shopping links lead to CAFANS. Category links open the corresponding CAFANS category, while the main browsing button opens the CAFANS homepage.</p>
+            </details>
+          </section>
+        </div>
+      </div>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div>
+          <h2 id="closing-title">Choose a category.<br>Bring a useful question.</h2>
+          <p>Continue to CAFANS to browse, then use the listing details to build your own product research record.</p>
+        </div>
+        <a class="button" href="https://www.cafans.com">Browse CAFANS <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <p>Independent editorial guide for the search term “Jayagoo spreadsheet.” No affiliation with Jayagoo, Nike, Louis Vuitton, Gucci, or Hermès is claimed. Brand names identify the illustrated references. Product information, availability, and purchase terms must be checked at the destination.</p>
+      <a href="https://www.cafans.com">www.cafans.com ↗</a>
+    </footer>
+  </div>
+</body>
+</html>
